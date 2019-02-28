@@ -1,0 +1,70 @@
+guillaume@guillaume-Nitro-AN515-51:~$ cd Documents/Wild_Code_School/Git
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git status
+Sur la branche wcs
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+
+	Capture du 2019-02-27 21-05-00.png
+	WCS_Git_Screenshot0.png
+	WCS_Git_screenshot.png
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ mkdir Screenshot
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ ls
+'Capture du 2019-02-27 21-05-00.png'   Screenshot                WCS_Git_screenshot.png
+ README.md                             WCS_Git_Screenshot0.png   wild.php
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ mv 'Capture du 2019-02-27 21-05-00.png' Screenshot
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ ls
+README.md  Screenshot  WCS_Git_Screenshot0.png  WCS_Git_screenshot.png  wild.php
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ mv WCS_Git_Screenshot0.png Screenshot/
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ mv WCS_Git_screenshot.png Screenshot/
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ ls
+README.md  Screenshot  wild.php
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git status
+Sur la branche wcs
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+
+	Screenshot/
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git add Screenshot/
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git status
+Sur la branche wcs
+Modifications qui seront validées :
+  (utilisez "git reset HEAD <fichier>..." pour désindexer)
+
+	nouveau fichier : Screenshot/Capture du 2019-02-27 21-05-00.png
+	nouveau fichier : Screenshot/WCS_Git_Screenshot0.png
+	nouveau fichier : Screenshot/WCS_Git_screenshot.png
+
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ ls
+README.md  Screenshot  wild.php
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git checkout master
+A	Screenshot/Capture du 2019-02-27 21-05-00.png
+A	Screenshot/WCS_Git_Screenshot0.png
+A	Screenshot/WCS_Git_screenshot.png
+Basculement sur la branche 'master'
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git pull origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Impossible de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git merge wcs
+Mise à jour 35d45a3..28c985c
+Fast-forward
+ wild.php | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 wild.php
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ git status
+Sur la branche master
+Modifications qui seront validées :
+  (utilisez "git reset HEAD <fichier>..." pour désindexer)
+
+	nouveau fichier : Screenshot/Capture du 2019-02-27 21-05-00.png
+	nouveau fichier : Screenshot/WCS_Git_Screenshot0.png
+	nouveau fichier : Screenshot/WCS_Git_screenshot.png
+
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ gitk
+guillaume@guillaume-Nitro-AN515-51:~/Documents/Wild_Code_School/Git$ 
